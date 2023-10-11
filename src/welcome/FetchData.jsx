@@ -18,15 +18,14 @@ const FetchData = () => {
 
    return (
        <div>
-          <h1>hello world</h1>
+          <h3>{advice}</h3>
           <button onClick={getAdvice}>Get advice</button>
-          <br/>{advice}
+          <br/>
           <Message count={count}/>
        </div>
    );
 };
 
-// eslint-disable-next-line react/prop-types
 function Message({count}) {
    return (
        <p>
