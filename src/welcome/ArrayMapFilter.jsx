@@ -24,8 +24,10 @@ const ArrayMapFilter = () => {
    return (
        <>
           {titles}
+          <h3>data 추출 : map</h3>
           {essentialData.map(ed => <h5 key={ed.title}>
              제목 : {ed.title}, 작가: {ed.author}, 리뷰 수: {ed.reviewCount}</h5>)}
+          <h3>data filtering and mapping</h3>
           {longPageBookWithMovie.map(book => <div key={book.id}>{book.title}, {book.pages}</div>)}
           {adventureBook}
        </>
