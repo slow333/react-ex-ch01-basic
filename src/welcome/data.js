@@ -66,7 +66,7 @@ export const data = [
       publicationDate: "1965-01-01",
       author: "Frank Herbert",
       genres: ["science fiction", "novel", "adventure"],
-      hasMovieAdaptation: true,
+      hasMovieAdaptation: false,
       pages: 658,
       translations: {
          spanish: "",
