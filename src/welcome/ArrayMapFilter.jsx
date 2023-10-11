@@ -1,5 +1,5 @@
 import React from 'react';
-import {getBook, getBooks} from "./DestructureEx.jsx";
+import {getBooks} from "./DestructureEx.jsx";
 import {getTotalReviewCount} from "./OptionalChainAndLogicalOp.jsx";
 
 const ArrayMapFilter = () => {
@@ -7,9 +7,8 @@ const ArrayMapFilter = () => {
    const titles = books.map(book => <p key={book.id}>{book.title}</p>)
    const essentialData = books.map(book => {
       return {
-         title: book.title,
-         author: book.author,
-         reviewCount : getTotalReviewCount(book)
+         title: book.title, author: book.author,
+         reviewCount: getTotalReviewCount(book)
       }
    })
 
@@ -23,11 +22,14 @@ const ArrayMapFilter = () => {
 
    return (
        <>
-          {titles}
+          <h3>map for title : </h3>{titles}
+          <h3>[ data 추출 : map ]</h3>
           {essentialData.map(ed => <h5 key={ed.title}>
              제목 : {ed.title}, 작가: {ed.author}, 리뷰 수: {ed.reviewCount}</h5>)}
+          <h3>[ data filtering and mapping ]</h3>
           {longPageBookWithMovie.map(book => <div key={book.id}>{book.title}, {book.pages}</div>)}
           {adventureBook}
+
        </>
    );
 }
