@@ -1,7 +1,4 @@
-import {data} from "./data.js";
-
-export function getBooks() { return data; }
-export const getBook = (id) => data.find(d => d.id === id)
+import {data, getBook, getBooks} from "./data.js";
 
 export default function DestructureEx() {
    const books = getBooks();
@@ -10,8 +7,6 @@ export default function DestructureEx() {
    const [primary, secondary, ...otherGenres] = genres;
    const newGenres = ["horrors", ...genres]
    const updateBook = {...book, author: "me make", pages: 1300}
-
-   // template literals
 
    return (
        <div>

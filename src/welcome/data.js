@@ -134,3 +134,6 @@ export const data = [
       },
    },
 ];
+
+export function getBooks() { return data; }
+export const getBook = (id) => data.find(d => d.id === id)

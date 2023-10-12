@@ -1,9 +1,8 @@
 import React from 'react';
-import {getBooks} from "./DestructureEx.jsx";
+import {getBooks} from "./data.js";
 
 const ArrayReduceSort = () => {
    const books = getBooks();
-
 
    const pagesAllBooks = books.reduce((acc, previousValue) =>
        acc + previousValue.pages, 0)

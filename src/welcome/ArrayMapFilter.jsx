@@ -1,6 +1,6 @@
 import React from 'react';
-import {getBooks} from "./DestructureEx.jsx";
 import {getTotalReviewCount} from "./OptionalChainAndLogicalOp.jsx";
+import {getBooks} from "./data.js";
 
 const ArrayMapFilter = () => {
    const books = getBooks();

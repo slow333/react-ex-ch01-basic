@@ -1,6 +1,5 @@
 import React from 'react';
-import {data} from "./data.js";
-import {getBook} from "./DestructureEx.jsx";
+import {data, getBook} from "./data.js";
 
 export function getTotalReviewCount (book) {
    const goodreads = book.reviews?.goodreads?.reviewsCount || 0;
