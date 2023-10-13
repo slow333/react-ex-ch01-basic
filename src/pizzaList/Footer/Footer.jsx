@@ -1,15 +1,32 @@
+import React from "react";
+
 const Footer = () => {
 
    const hour = new Date().getHours();
+
    const openHour = 11;
    const closeHour = 22;
+   const isOpen = hour >= openHour && hour <= closeHour;
 
-   const isOpen = (hour >= openHour && hour <= closeHour)
-        ? "영업 중입니다." : "아직 안 열었어요, 문 닫았어요."
+   if(!isOpen) {
+      return (
+           <div className='footer order'>
+              영업 시간은 {openHour}:00 ~ {closeHour}:00 입니다.
+           </div>
+      )
+   }
 
    return (
         <footer className='footer'>
-           {new Date().toLocaleDateString()} : {hour}시  {isOpen}
+           {isOpen &&
+                <div className='order'>
+                   <div>
+                      영업 중입니다. {closeHour}:00에 닫어요.
+                   </div>
+                   <button className='btn' >주문하세요</button>
+                </div>
+           }
+
         </footer>
    );
 }

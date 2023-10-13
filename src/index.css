@@ -144,11 +144,11 @@ body {
   font-size: 1.2rem;
 }
 
-.pizza .sold-out {
+.pizza.sold-out {
   color: #d9d35a;
 }
 
-.pizza .sold-out img {
+.pizza.sold-out img {
   filter: grayscale(90%);
   /*filter: grayscale();*/
   opacity: 0.8;
@@ -181,9 +181,14 @@ body {
 }
 
 .btn:hover {
-  background-color: #e9bb24;
+  background-color: #856c16;
 }
-
+.btn:disabled,
+.btn[disabled]{
+  /*border: 1px solid #999999;*/
+  background-color: #cccccc;
+  color: #666666;
+}
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
