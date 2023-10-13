@@ -5,13 +5,15 @@ export const pizzaData = [
     price: 6,
     photoName: "pizzas/focaccia.jpg",
     soldOut: false,
+    id:1
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato and mozarella",
     price: 10,
     photoName: "pizzas/margherita.jpg",
-    soldOut: false,
+    soldOut: true,
+    id:2
   },
   {
     name: "Pizza Spinaci",
@@ -19,6 +21,7 @@ export const pizzaData = [
     price: 12,
     photoName: "pizzas/spinaci.jpg",
     soldOut: false,
+    id:3
   },
   {
     name: "Pizza Funghi",
@@ -26,6 +29,7 @@ export const pizzaData = [
     price: 12,
     photoName: "pizzas/funghi.jpg",
     soldOut: false,
+    id:4
   },
   {
     name: "Pizza Salamino",
@@ -33,6 +37,7 @@ export const pizzaData = [
     price: 15,
     photoName: "pizzas/salamino.jpg",
     soldOut: true,
+    id:5
   },
   {
     name: "Pizza Prosciutto",
@@ -40,8 +45,11 @@ export const pizzaData = [
     price: 18,
     photoName: "pizzas/prosciutto.jpg",
     soldOut: false,
+    id:6
   },
 ];
-export const getPizzaData = () => { return pizzaData}
+export const getPizzaData = () => {
+  return pizzaData }
 export const getPizzaByName = (name) =>
-  { return pizzaData.filter(pizza => pizza.name.includes(name) === true) }
+  { return pizzaData.filter(pizza =>
+       pizza.name.includes(name) === true) }
