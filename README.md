@@ -10,4 +10,4 @@
 + npm vite@latest
 + env setting
 + interactive components(state, events, forms)
-+ project
++ project : pizza menu
