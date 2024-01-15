@@ -8,6 +8,7 @@ const FetchData = () => {
    async function getAdvice() {
       const res = await fetch("https://api.adviceslip.com/advice")
       const data = await res.json()
+       console.log("...", count)
       setAdvice(data.slip.advice)
       setCount( c => c + 1)
    }
@@ -18,9 +19,9 @@ const FetchData = () => {
 
    return (
        <div>
-          <h3>{advice}</h3>
-          <button onClick={getAdvice}>Get advice</button>
-          <br/>
+          <h2>{advice}</h2>
+          <button onClick={getAdvice} className="btn-click">Get advice</button>
+          <hr/>
           <Message count={count}/>
        </div>
    );
@@ -28,8 +29,8 @@ const FetchData = () => {
 
 function Message({count}) {
    return (
-       <p>
-          <strong>{count}</strong>개의 advice를 읽었습니다.
+       <p style={{fontSize:"20px"}}>
+          <strong style={{color:"red"}}>{count}개의</strong> advice를 읽었습니다.
        </p>
    )
 }
